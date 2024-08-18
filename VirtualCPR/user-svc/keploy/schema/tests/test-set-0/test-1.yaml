@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+    title: test-1
+    version: api.keploy.io/v1beta1
+    description: Http
+servers:
+    - url: localhost:3000
+paths:
+    /request-otp:
+        post:
+            summary: Auto-generated operation
+            description: Auto-generated from custom format
+            parameters:
+                - name: Host
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: localhost:3000
+                - name: User-Agent
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: curl/7.68.0
+                - name: Accept
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: '*/*'
+                - name: Content-Length
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: "95"
+                - name: Content-Type
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: application/json
+            operationId: e9486960ded2606b9b28fa0c1ca48e30-20240812141701
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                message:
+                                    type: string
+                                phone:
+                                    type: string
+                        example:
+                            message: Your OTP code is 123456
+                            phone: "+1234567890"
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    message:
+                                        type: string
+                                    otpResponse:
+                                        properties:
+                                            explanation:
+                                                type: string
+                                            message:
+                                                type: string
+                                        type: object
+                            example:
+                                message: OTP requested
+                                otpResponse:
+                                    explanation: OTP is generated and sent to user
+                                    message: OTP generated
+components: {}

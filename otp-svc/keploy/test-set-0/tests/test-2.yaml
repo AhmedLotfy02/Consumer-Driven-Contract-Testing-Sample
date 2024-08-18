@@ -1,0 +1,46 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:3001/otp
+        header:
+            Accept: application/json, text/plain, */*
+            Accept-Encoding: gzip, compress, deflate, br
+            Connection: keep-alive
+            Host: localhost:3001
+            User-Agent: axios/1.7.2
+        body: ""
+        timestamp: 2024-08-08T02:03:20.007979422+03:00
+    resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "29"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 07 Aug 2024 23:03:20 GMT
+            Etag: W/"1d-1iFfnBvdp9lZ1rHaLHontpF3mzQ"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"otp":"123456","valid":true}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-08-08T02:03:22.066058667+03:00
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1723071802
+curl: |
+    curl --request GET \
+      --url http://localhost:3001/otp \
+      --header 'User-Agent: axios/1.7.2' \
+      --header 'Accept-Encoding: gzip, compress, deflate, br' \
+      --header 'Host: localhost:3001' \
+      --header 'Connection: keep-alive' \
+      --header 'Accept: application/json, text/plain, */*' \

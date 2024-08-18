@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+    title: test-1
+    version: api.keploy.io/v1beta1
+    description: Http
+servers:
+    - url: localhost:3002
+paths:
+    /notify:
+        get:
+            summary: Auto-generated operation
+            description: Auto-generated from custom format
+            parameters:
+                - name: Accept
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: '*/*'
+                - name: Host
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: localhost:3002
+                - name: User-Agent
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: curl/7.68.0
+            operationId: e4789817c784a4f7b3501870126730fe-20240812141452
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    message:
+                                        type: string
+                                    otpStatus:
+                                        properties:
+                                            status:
+                                                type: string
+                                        type: object
+                            example:
+                                message: Notification sent
+                                otpStatus:
+                                    status: OTP sent
+components: {}

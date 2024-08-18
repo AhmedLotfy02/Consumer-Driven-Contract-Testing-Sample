@@ -1,0 +1,109 @@
+openapi: 3.0.0
+info:
+    title: mock-0
+    version: api.keploy.io/v1beta1
+    description: Http
+servers:
+    - url: temp
+paths:
+    /otp:
+        get:
+            summary: Auto-generated operation
+            description: Auto-generated from custom format
+            parameters:
+                - name: Accept
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: application/json, text/plain, */*
+                - name: Accept-Encoding
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: gzip, compress, deflate, br
+                - name: Connection
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: keep-alive
+                - name: User-Agent
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: axios/1.7.2
+            operationId: e8ae1d0325bf891a3860a4ee6371d793-20240812141701
+            responses:
+                "200":
+                    description: ""
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    otp:
+                                        type: string
+                                    valid:
+                                        type: boolean
+                            example:
+                                otp: "123456"
+                                valid: true
+components: {}
+---
+openapi: 3.0.0
+info:
+    title: mock-1
+    version: api.keploy.io/v1beta1
+    description: Http
+servers:
+    - url: temp
+paths:
+    /otp:
+        get:
+            summary: Auto-generated operation
+            description: Auto-generated from custom format
+            parameters:
+                - name: Connection
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: keep-alive
+                - name: User-Agent
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: axios/1.7.2
+                - name: Accept
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: application/json, text/plain, */*
+                - name: Accept-Encoding
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: gzip, compress, deflate, br
+            operationId: 221276b68572f2a84218492acd93affb-20240812141701
+            responses:
+                "200":
+                    description: ""
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    otp:
+                                        type: string
+                                    validResponse:
+                                        type: boolean
+                            example:
+                                otp: "123456"
+                                validResponse: true
+components: {}

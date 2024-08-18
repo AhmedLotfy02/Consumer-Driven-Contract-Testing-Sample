@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+    title: test-2
+    version: api.keploy.io/v1beta1
+    description: Http
+servers:
+    - url: localhost:3000
+paths:
+    /notification-status:
+        get:
+            summary: Auto-generated operation
+            description: Auto-generated from custom format
+            parameters:
+                - name: Accept
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: '*/*'
+                - name: Host
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: localhost:3000
+                - name: User-Agent
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: curl/7.68.0
+            operationId: 0fbd49272b41044004a19186b3f35127-20240812141701
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    message:
+                                        type: string
+                                    notifyStatus:
+                                        properties:
+                                            status:
+                                                type: string
+                                        type: object
+                            example:
+                                message: Notification status retrieved
+                                notifyStatus:
+                                    status: Notification service is running
+components: {}

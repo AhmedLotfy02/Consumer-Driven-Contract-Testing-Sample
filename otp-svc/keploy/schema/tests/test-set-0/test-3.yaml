@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+    title: test-3
+    version: api.keploy.io/v1beta1
+    description: Http
+servers:
+    - url: localhost:3001
+paths:
+    /otp-status:
+        get:
+            summary: Auto-generated operation
+            description: Auto-generated from custom format
+            parameters:
+                - name: Connection
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: keep-alive
+                - name: Host
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: localhost:3001
+                - name: User-Agent
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: axios/1.7.2
+                - name: Accept
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: application/json, text/plain, */*
+                - name: Accept-Encoding
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: gzip, compress, deflate, br
+            operationId: 7d94934d82f3a420571905967c926487-20240815220851
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    status:
+                                        type: string
+                            example:
+                                status: OTP sent
+components: {}

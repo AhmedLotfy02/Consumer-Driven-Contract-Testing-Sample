@@ -1,0 +1,50 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:3001/otp
+        header:
+            Accept: application/json, text/plain, */*
+            Accept-Encoding: gzip, compress, deflate, br
+            Connection: keep-alive
+            Content-Length: "59"
+            Content-Type: application/json
+            Host: localhost:3001
+            User-Agent: axios/1.7.2
+        body: '{"phone":"+1234567890","message":"Your OTP code is 123456"}'
+        timestamp: 2024-08-08T02:03:15.636391702+03:00
+    resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "77"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 07 Aug 2024 23:03:15 GMT
+            Etag: W/"4d-Z92ql0GnnNYoZIQ0tUKzfn/6jMs"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"message":"OTP generated","explanation":"OTP is generated and sent to user"}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-08-08T02:03:17.65313335+03:00
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1723071797
+curl: |-
+    curl --request POST \
+      --url http://localhost:3001/otp \
+      --header 'Connection: keep-alive' \
+      --header 'Accept: application/json, text/plain, */*' \
+      --header 'Content-Type: application/json' \
+      --header 'User-Agent: axios/1.7.2' \
+      --header 'Accept-Encoding: gzip, compress, deflate, br' \
+      --header 'Host: localhost:3001' \
+      --data '{"phone":"+1234567890","message":"Your OTP code is 123456"}'

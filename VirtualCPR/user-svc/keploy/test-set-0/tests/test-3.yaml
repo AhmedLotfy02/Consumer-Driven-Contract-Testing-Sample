@@ -1,0 +1,42 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-3
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:3000/get-otp
+        header:
+            Accept: '*/*'
+            Host: localhost:3000
+            User-Agent: curl/7.68.0
+        body: ""
+        timestamp: 2024-08-08T01:57:07.835928774+03:00
+    resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "63"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 07 Aug 2024 22:57:07 GMT
+            Etag: W/"3f-DKE5EKfw5Q/yBEx5HMsrDNs/+Iw"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"message":"OTP retrieved","otp":{"otp":"123456","valid":true}}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-08-08T01:57:09.907693599+03:00
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1723071429
+curl: |
+    curl --request GET \
+      --url http://localhost:3000/get-otp \
+      --header 'User-Agent: curl/7.68.0' \
+      --header 'Accept: */*' \
+      --header 'Host: localhost:3000' \

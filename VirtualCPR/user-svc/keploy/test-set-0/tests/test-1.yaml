@@ -1,0 +1,53 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:3000/request-otp
+        header:
+            Accept: '*/*'
+            Content-Length: "95"
+            Content-Type: application/json
+            Host: localhost:3000
+            User-Agent: curl/7.68.0
+        body: |-
+            {
+                       "phone": "+1234567890",
+                       "message": "Your OTP code is 123456"
+                     }
+        timestamp: 2024-08-08T01:54:07.229291381+03:00
+    resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "119"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 07 Aug 2024 22:54:07 GMT
+            Etag: W/"77-H8Xpi1PRAz0amq9Lu3OKslTtjFI"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"message":"OTP requested","otpResponse":{"message":"OTP generated","explanation":"OTP is generated and sent to user"}}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-08-08T01:54:09.451492773+03:00
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1723071249
+curl: |-
+    curl --request POST \
+      --url http://localhost:3000/request-otp \
+      --header 'User-Agent: curl/7.68.0' \
+      --header 'Accept: */*' \
+      --header 'Content-Type: application/json' \
+      --header 'Host: localhost:3000' \
+      --data '{
+               "phone": "+1234567890",
+               "message": "Your OTP code is 123456"
+             }'

@@ -1,0 +1,17 @@
+{
+  "name": "notify-svc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "axois": "^0.0.1-security",
+    "express": "^4.19.2"
+  }
+}

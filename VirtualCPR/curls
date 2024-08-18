@@ -1,0 +1,13 @@
+user-svc:
+curl http://localhost:3000/notification-status
+curl -X POST http://localhost:3000/request-otp \
+     -H "Content-Type: application/json" \
+     -d '{
+           "phone": "+1234567890",
+           "message": "Your OTP code is 123456"
+         }'
+
+curl http://localhost:3000/get-otp
+
+notify:
+curl http://localhost:3002/notify

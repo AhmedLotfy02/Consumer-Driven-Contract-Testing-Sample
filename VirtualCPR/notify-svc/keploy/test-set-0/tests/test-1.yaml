@@ -1,0 +1,42 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:3002/notify
+        header:
+            Accept: '*/*'
+            Host: localhost:3002
+            User-Agent: curl/7.68.0
+        body: ""
+        timestamp: 2024-08-08T02:00:50.555970139+03:00
+    resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "65"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 07 Aug 2024 23:00:50 GMT
+            Etag: W/"41-mk6ge6+aMGe1PsiPPOglsQSSkwg"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"message":"Notification sent","otpStatus":{"status":"OTP sent"}}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-08-08T02:00:52.657514886+03:00
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1723071652
+curl: |
+    curl --request GET \
+      --url http://localhost:3002/notify \
+      --header 'Host: localhost:3002' \
+      --header 'User-Agent: curl/7.68.0' \
+      --header 'Accept: */*' \
