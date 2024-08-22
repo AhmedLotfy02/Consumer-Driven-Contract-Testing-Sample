@@ -1,9 +1,3 @@
-services: []
-tests: []
-path: ""
-download: false
-generate: false
-driven: ""
 servicesMapping:
   otp-svc:
     - localhost:3001

@@ -11,12 +11,6 @@ paths:
             summary: Auto-generated operation
             description: Auto-generated from custom format
             parameters:
-                - name: Content-Type
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: application/json
                 - name: Host
                   in: header
                   required: true
@@ -53,7 +47,13 @@ paths:
                   schema:
                     type: string
                   example: "59"
-            operationId: 8021ae1450db660e3f8d10ed4691ca48-20240815220851
+                - name: Content-Type
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: application/json
+            operationId: d2a5f4974543ddfea72f3789b3cf4877-20240822211612
             requestBody:
                 content:
                     application/json:

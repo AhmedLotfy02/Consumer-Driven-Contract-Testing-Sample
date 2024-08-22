@@ -11,18 +11,6 @@ paths:
             summary: Auto-generated operation
             description: Auto-generated from custom format
             parameters:
-                - name: Connection
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: keep-alive
-                - name: Host
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: localhost:3001
                 - name: User-Agent
                   in: header
                   required: true
@@ -41,7 +29,19 @@ paths:
                   schema:
                     type: string
                   example: gzip, compress, deflate, br
-            operationId: 7d94934d82f3a420571905967c926487-20240815220851
+                - name: Connection
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: keep-alive
+                - name: Host
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: localhost:3001
+            operationId: 381993f88abb00464c6a0259dde732d0-20240822211612
             responses:
                 "200":
                     description: OK

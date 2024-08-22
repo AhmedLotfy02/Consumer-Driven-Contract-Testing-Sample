@@ -39,23 +39,15 @@ keployContainer: keploy-v2
 keployNetwork: keploy-network
 cmdType: native
 contract:
-    services: []
-    tests: []
-    path: ""
-    download: false
-    generate: false
-    driven: ""
-    servicesMapping:
-        s2:
-            - /s2endpoint
-            - localhost:9222
-        s3:
-            - /s3endpoint
-            - /otp-service/
-        s5:
-            - localhost:3000
-            - /endpoint
-    self: s1
+  services: []
+  tests: []
+  path: ""
+  download: false
+  generate: false
+  driven: ""
+  mappings:
+    servicesMapping: {}
+    self: user-svc
 inCi: false
 
 # Visit [https://keploy.io/docs/running-keploy/configuration-file/] to learn about using keploy through configration file.

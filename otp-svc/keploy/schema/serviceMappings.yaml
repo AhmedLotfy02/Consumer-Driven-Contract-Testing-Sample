@@ -1,9 +1,3 @@
-services: []
-tests: []
-path: /home/ahmed/Desktop/
-download: false
-generate: true
-driven: consumer
 servicesMapping:
     notify-svc:
         - localhost:3000

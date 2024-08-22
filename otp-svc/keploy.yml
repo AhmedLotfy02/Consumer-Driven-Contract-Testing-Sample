@@ -39,20 +39,20 @@ keployContainer: keploy-v2
 keployNetwork: keploy-network
 cmdType: native
 contract:
-    services: []
-    tests: []
-    path: ""
-    download: false
-    generate: false
-    driven: ""
+  services: []
+  tests: []
+  path: ""
+  download: false
+  generate: false
+  driven: "consumer"
+  mappings:
     servicesMapping:
-        notify-svc:
-            - localhost:3000
-            - /endpoint
-            
-        user-svc:
-            - localhost:3000
-            - /endpoint
+      user-svc:
+        - /otp
+        - /otp-status
+      notify-svc:
+        - localhost:3000
+        - /otp-status
     self: otp-svc
 inCi: false
 
