@@ -1,0 +1,14 @@
+services: []
+tests: []
+path: /home/ahmed/Desktop/
+download: false
+generate: true
+driven: consumer
+servicesMapping:
+    notify-svc:
+        - localhost:3000
+        - /otp-status
+    user-svc:
+        - /otp
+        - /otp-status
+self: otp-svc

@@ -1,0 +1,16 @@
+services: []
+tests: []
+path: ""
+download: false
+generate: false
+driven: ""
+servicesMapping:
+  otp-svc:
+    - localhost:3001
+    - /otp
+
+  notify-svc:
+    - localhost:3003
+    - /notification-status
+self: user-svc
+
