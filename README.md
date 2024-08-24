@@ -179,12 +179,9 @@
 <h2>Consumer Driven Testing</h2>
 <ol>
   <li>Run the <code>keploy contract test</code> command to run consumer driven contract testing:
-      <pre><code>keploy contract test --driven "consumer" --download "true" </code></pre>
+      <pre><code>keploy contract test --driven "consumer" </code></pre>
   </li>
-  <li>You can use --generate and --download  flags to generate and download the OpenAPI schemas without using generate command separatly: 
-        <pre><code>keploy contract test --driven "consumer" --download "true" --generate "true" </code></pre>
-
-  </li>
+ 
   
  </ol>
 <h2>Differences & Summary</h2>
