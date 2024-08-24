@@ -1,0 +1,2 @@
+notify:
+curl http://localhost:3002/notify

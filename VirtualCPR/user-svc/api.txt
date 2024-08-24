@@ -9,5 +9,3 @@ curl -X POST http://localhost:3000/request-otp \
 
 curl http://localhost:3000/get-otp
 
-notify:
-curl http://localhost:3002/notify
