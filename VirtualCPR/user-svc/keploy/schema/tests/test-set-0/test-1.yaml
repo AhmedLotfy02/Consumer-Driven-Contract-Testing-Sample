@@ -11,18 +11,6 @@ paths:
             summary: Auto-generated operation
             description: Auto-generated from custom format
             parameters:
-                - name: Host
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: localhost:3000
-                - name: User-Agent
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: curl/7.68.0
                 - name: Accept
                   in: header
                   required: true
@@ -41,7 +29,19 @@ paths:
                   schema:
                     type: string
                   example: application/json
-            operationId: e9486960ded2606b9b28fa0c1ca48e30-20240812141701
+                - name: Host
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: localhost:3000
+                - name: User-Agent
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: curl/7.68.0
+            operationId: c51bd17ed84adcb281f128ec27da6a78-20240824205349
             requestBody:
                 content:
                     application/json:

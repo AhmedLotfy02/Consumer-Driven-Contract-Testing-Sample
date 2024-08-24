@@ -46,7 +46,11 @@ contract:
   generate: false
   driven: ""
   mappings:
-    servicesMapping: {}
+    servicesMapping: 
+      otp-svc:
+        - /otp
+      notify-svc:
+        - /notification-status
     self: user-svc
 inCi: false
 

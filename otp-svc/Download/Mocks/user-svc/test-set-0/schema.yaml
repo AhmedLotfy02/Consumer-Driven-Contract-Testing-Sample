@@ -11,24 +11,6 @@ paths:
             summary: Auto-generated operation
             description: Auto-generated from custom format
             parameters:
-                - name: Content-Length
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: "59"
-                - name: Content-Type
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: application/json
-                - name: User-Agent
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: axios/1.7.2
                 - name: Accept
                   in: header
                   required: true
@@ -47,7 +29,25 @@ paths:
                   schema:
                     type: string
                   example: keep-alive
-            operationId: 12a1ff0a6b012594f4e924a5fcd36baa-20240812141701
+                - name: Content-Length
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: "59"
+                - name: Content-Type
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: application/json
+                - name: User-Agent
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: axios/1.7.2
+            operationId: abdfd67f1e39432a952cdb095e83857b-20240824205349
             requestBody:
                 content:
                     application/json:
@@ -91,6 +91,12 @@ paths:
             summary: Auto-generated operation
             description: Auto-generated from custom format
             parameters:
+                - name: Connection
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: keep-alive
                 - name: Content-Length
                   in: header
                   required: true
@@ -121,13 +127,7 @@ paths:
                   schema:
                     type: string
                   example: gzip, compress, deflate, br
-                - name: Connection
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: keep-alive
-            operationId: bec15b4c3b3f40e83784b6fb0f769f6a-20240812141701
+            operationId: 89cfe8296b962439ef43e0b80f096bb0-20240824205349
             requestBody:
                 content:
                     application/json:
@@ -195,7 +195,7 @@ paths:
                   schema:
                     type: string
                   example: gzip, compress, deflate, br
-            operationId: 5a585bf8a1bbde11a5d7e82ca930d04a-20240812141701
+            operationId: c3f748b47878ade14ab5c30a269587e1-20240824205349
             responses:
                 "200":
                     description: ""

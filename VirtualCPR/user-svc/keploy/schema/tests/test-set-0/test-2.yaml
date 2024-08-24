@@ -29,7 +29,7 @@ paths:
                   schema:
                     type: string
                   example: curl/7.68.0
-            operationId: 0fbd49272b41044004a19186b3f35127-20240812141701
+            operationId: 3dae2f85712bc4b51242b34161fba07b-20240824205349
             responses:
                 "200":
                     description: OK

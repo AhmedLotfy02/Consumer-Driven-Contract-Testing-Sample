@@ -11,12 +11,6 @@ paths:
             summary: Auto-generated operation
             description: Auto-generated from custom format
             parameters:
-                - name: User-Agent
-                  in: header
-                  required: true
-                  schema:
-                    type: string
-                  example: axios/1.7.2
                 - name: Accept
                   in: header
                   required: true
@@ -41,7 +35,13 @@ paths:
                   schema:
                     type: string
                   example: localhost:3001
-            operationId: 381993f88abb00464c6a0259dde732d0-20240822211612
+                - name: User-Agent
+                  in: header
+                  required: true
+                  schema:
+                    type: string
+                  example: axios/1.7.2
+            operationId: 60e58014bcece772bff82a05220279aa-20240824205508
             responses:
                 "200":
                     description: OK
